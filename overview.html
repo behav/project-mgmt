@@ -307,7 +307,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Overview</h1>
 <h4 class="author">Rick O. Gilmore</h4>
-<h4 class="date">2019-04-15 09:47:41</h4>
+<h4 class="date">2019-04-15 10:30:20</h4>
 
 </div>
 
@@ -318,7 +318,16 @@ div.tocify {
 </div>
 <div id="support" class="section level1">
 <h1><span class="header-section-number">2</span> Support</h1>
+<div id="active" class="section level2">
+<h2><span class="header-section-number">2.1</span> Active</h2>
 <p>BehAV.ai is supported by the Penn State Institute for Cyberscience (ICS) seed grant program.</p>
+</div>
+<div id="potential" class="section level2">
+<h2><span class="header-section-number">2.2</span> Potential</h2>
+<ul>
+<li><a href="https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-145.html" class="uri">https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-145.html</a></li>
+</ul>
+</div>
 </div>
 <div id="team-members" class="section level1">
 <h1><span class="header-section-number">3</span> Team members</h1>
@@ -330,24 +339,46 @@ div.tocify {
 <li>Ori Ossmy, Ph.D., NYU (consultant)</li>
 <li>Jeff Spies, Ph.D. Databrary.org (adviser)</li>
 <li>Conrad Tucker, Ph.D., PSU/CMU (Co-PI)</li>
+<li>Drew Polasky, PSU/ICS (consultant)</li>
 </ul>
 </div>
 <div id="resources" class="section level1">
 <h1><span class="header-section-number">4</span> Resources</h1>
+<div id="technology-evaluation" class="section level2">
+<h2><span class="header-section-number">4.1</span> Technology evaluation</h2>
+<div id="domains" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Domains</h3>
+<p>Most tools focus on a small subset of domains:</p>
+<ol style="list-style-type: decimal">
+<li>Object/face detection or labeling</li>
+<li>Body pose estimation/motion tracking</li>
+<li>Speech transcription</li>
+</ol>
+<p>Pliers, on the other hand, provides a set of tools to generate annotations in a common data format.</p>
+</div>
+<div id="software-stack" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Software stack</h3>
+<p>Pliers, DeepLabCut, and LEAP are Python tools. VoTT uses node.js.</p>
+</div>
+</div>
 <div id="open-source-software-tools" class="section level2">
-<h2><span class="header-section-number">4.1</span> Open source software tools</h2>
+<h2><span class="header-section-number">4.2</span> Open source software tools</h2>
 <ul>
 <li><a href="https://github.com/Microsoft/VoTT">Microsoft Visual Object Tagging Tool (VoTT)</a></li>
 <li><a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose">OpenPose</a> pose estimation</li>
 <li><a href="https://github.com/AlexEMG/DeepLabCut">DeepLapCut</a> motion tracking, especially for non-human animals</li>
-<li><a href="https://github.com/talmo/leap">Leap Estimates Animal Pose (LEAP)</a></li>
+<li><a href="https://github.com/talmo/leap">Leap Estimates Animal Pose (LEAP)</a>
+<ul>
+<li>ROG met the developer Talmo Pereira at the 2019 BRAIN Initiative investigators meeting.</li>
+</ul></li>
 <li><a href="http://jaaba.sourceforge.net/">JAABA - Janelia Automatic Animal Behavior Annotator</a></li>
 <li><a href="https://github.com/tyarkoni/pliers">Pliers</a>, Python package for integrating video/audio/image feature extraction</li>
 <li><a href="https://pjreddie.com/darknet/yolo/">You Only Look Once (Yolo)</a> object labeling</li>
+<li><a href="https://opencv.org/">OpenCV</a></li>
 </ul>
 </div>
 <div id="references" class="section level2">
-<h2><span class="header-section-number">4.2</span> References</h2>
+<h2><span class="header-section-number">4.3</span> References</h2>
 <p>Biggs, B., Roddick, T., Fitzgibbon, A., &amp; Cipolla, R. (2018, November 14). Creatures great and SMAL: Recovering the shape and motion of animals from video. arXiv [cs.CV]. Retrieved from arXiv.</p>
 <p>Clemens, J., Coen, P., Roemschied, F. A., Pereira, T. D., Mazumder, D., Aldarondo, D. E., Pacheco, D. A., et al. (2018). Discovery of a New Song Mode in Drosophila Reveals Hidden Structure in the Sensory and Neural Drivers of Behavior. Current biology: CB, 28(15), 2400–2412.e6. Elsevier. Retrieved from <a href="http://dx.doi.org/10.1016/j.cub.2018.06.011" class="uri">http://dx.doi.org/10.1016/j.cub.2018.06.011</a></p>
 <p>Francisco, F. A., Nührenberg, P., &amp; Jordan, A. L. (2019). A low-cost, open-source framework for tracking and behavioural analysis of animals in aquatic ecosystems. bioRxiv. biorxiv.org. Retrieved from <a href="https://www.biorxiv.org/content/10.1101/571232v1.abstract" class="uri">https://www.biorxiv.org/content/10.1101/571232v1.abstract</a></p>

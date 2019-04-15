@@ -22,7 +22,13 @@ To describe the BehAV.ai project team, resources available, and goals of the eff
 
 # Support
 
+## Active
+
 BehAV.ai is supported by the Penn State Institute for Cyberscience (ICS) seed grant program.
+
+## Potential
+
+- <https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-145.html>
 
 # Team members
 
@@ -33,8 +39,25 @@ BehAV.ai is supported by the Penn State Institute for Cyberscience (ICS) seed gr
 - Ori Ossmy, Ph.D., NYU (consultant)
 - Jeff Spies, Ph.D. Databrary.org (adviser)
 - Conrad Tucker, Ph.D., PSU/CMU (Co-PI)
+- Drew Polasky, PSU/ICS (consultant)
 
 # Resources
+
+## Technology evaluation
+
+### Domains
+
+Most tools focus on a small subset of domains:
+
+1. Object/face detection or labeling
+2. Body pose estimation/motion tracking
+3. Speech transcription
+
+Pliers, on the other hand, provides a set of tools to generate annotations in a common data format.
+
+### Software stack
+
+Pliers, DeepLabCut, and LEAP are Python tools. VoTT uses node.js.
 
 ## Open source software tools
 
@@ -42,9 +65,11 @@ BehAV.ai is supported by the Penn State Institute for Cyberscience (ICS) seed gr
 - [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) pose estimation
 - [DeepLapCut](https://github.com/AlexEMG/DeepLabCut) motion tracking, especially for non-human animals
 - [Leap Estimates Animal Pose (LEAP)](https://github.com/talmo/leap)
+    - ROG met the developer Talmo Pereira at the 2019 BRAIN Initiative investigators meeting.
 - [JAABA - Janelia Automatic Animal Behavior Annotator](http://jaaba.sourceforge.net/)
 - [Pliers](https://github.com/tyarkoni/pliers), Python package for integrating video/audio/image feature extraction
 - [You Only Look Once (Yolo)](https://pjreddie.com/darknet/yolo/) object labeling
+- [OpenCV](https://opencv.org/)
 
 ## References
 
