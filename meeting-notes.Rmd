@@ -36,3 +36,7 @@ knitr::opts_chunk$set(echo = TRUE)
     - Integration with Databrary or other API-accessible data sources
 
 ## Action items
+
+1. Kory and Dan will meet; create milestones.
+2. Rick to ACI about RA (Drew Polasky) and space/group account.
+

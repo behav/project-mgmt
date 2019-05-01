@@ -94,6 +94,7 @@ Pliers, DeepLabCut, and LEAP are Python tools. VoTT uses node.js.
 ## Commercial resources
 
 - [IBM PowerAI Vision](https://www.ibm.com/us-en/marketplace/ibm-powerai-vision)
+- IBM Intelligent Video Analytics
 
 ## Bibliography
 
