@@ -307,7 +307,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Overview</h1>
 <h4 class="author">Rick O. Gilmore</h4>
-<h4 class="date">2019-05-01 10:42:09</h4>
+<h4 class="date">2019-05-01 10:55:08</h4>
 
 </div>
 
@@ -346,22 +346,40 @@ div.tocify {
 <li>Drew Polasky, PSU/ICS (consultant)</li>
 </ul>
 </div>
+<div id="goals" class="section level1">
+<h1><span class="header-section-number">4</span> Goals</h1>
+<ol style="list-style-type: decimal">
+<li>Implement video/image data analytic workflows on PSU HPC resources</li>
+<li>Create UI to enable non-specialist users to deploy these workflows on their own videos</li>
+<li>Demonstrate utility of using videos stored on Databrary or other API-accessible sources</li>
+<li>Develop open/extensible video annotation format</li>
+<li>(Stretch) pilot UI/UX for visualizing annotations from multiple video analysis tools</li>
+<li>(Stretch) pilot scheme for semi-automated (human-in-the-loop) creation and modification of video analysis workflows</li>
+</ol>
+</div>
 <div id="resources" class="section level1">
-<h1><span class="header-section-number">4</span> Resources</h1>
+<h1><span class="header-section-number">5</span> Resources</h1>
 <div id="technology-evaluation" class="section level2">
-<h2><span class="header-section-number">4.1</span> Technology evaluation</h2>
+<h2><span class="header-section-number">5.1</span> Technology evaluation</h2>
 <div id="domains" class="section level3">
-<h3><span class="header-section-number">4.1.1</span> Domains</h3>
+<h3><span class="header-section-number">5.1.1</span> Domains</h3>
 <p>Most tools focus on a small subset of domains:</p>
 <ol style="list-style-type: decimal">
 <li>Object/face detection or labeling</li>
 <li>Body pose estimation/motion tracking</li>
 <li>Speech transcription</li>
 </ol>
-<p>Pliers, on the other hand, provides a set of tools to generate annotations in a common data format.</p>
+<p><a href="https://github.com/tyarkoni/pliers">Pliers</a>, on the other hand, provides a set of tools to generate annotations in a common data format.</p>
+</div>
+<div id="issues" class="section level3">
+<h3><span class="header-section-number">5.1.2</span> Issues</h3>
+<ul>
+<li>Open source vs. proprietary</li>
+<li>Do cloud/AI as a service providers maintain confidentiality/privacy? Some terms of use involve giving unlimited rights to analytic providers.</li>
+</ul>
 </div>
 <div id="software-stack" class="section level3">
-<h3><span class="header-section-number">4.1.2</span> Software stack</h3>
+<h3><span class="header-section-number">5.1.3</span> Software stack</h3>
 <p>Pliers, DeepLabCut, and LEAP are Python tools. VoTT uses node.js.</p>
 <ul>
 <li>A resource we may wish to consider is <a href="https://json-schema.org/">json-schema</a>.</li>
@@ -369,7 +387,7 @@ div.tocify {
 </div>
 </div>
 <div id="open-source-software-tools" class="section level2">
-<h2><span class="header-section-number">4.2</span> Open source software tools</h2>
+<h2><span class="header-section-number">5.2</span> Open source software tools</h2>
 <ul>
 <li><a href="https://github.com/Microsoft/VoTT">Microsoft Visual Object Tagging Tool (VoTT)</a></li>
 <li><a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose">OpenPose</a> pose estimation</li>
@@ -387,8 +405,14 @@ div.tocify {
 <li><a href="https://opencv.org/">OpenCV</a></li>
 </ul>
 </div>
+<div id="commercial-resources" class="section level2">
+<h2><span class="header-section-number">5.3</span> Commercial resources</h2>
+<ul>
+<li><a href="https://www.ibm.com/us-en/marketplace/ibm-powerai-vision">IBM PowerAI Vision</a></li>
+</ul>
+</div>
 <div id="bibliography" class="section level2">
-<h2><span class="header-section-number">4.3</span> Bibliography</h2>
+<h2><span class="header-section-number">5.4</span> Bibliography</h2>
 <p>Biggs, B., Roddick, T., Fitzgibbon, A., &amp; Cipolla, R. (2018, November 14). Creatures great and SMAL: Recovering the shape and motion of animals from video. arXiv [cs.CV]. Retrieved from arXiv.</p>
 <p>Clemens, J., Coen, P., Roemschied, F. A., Pereira, T. D., Mazumder, D., Aldarondo, D. E., Pacheco, D. A., et al. (2018). Discovery of a New Song Mode in Drosophila Reveals Hidden Structure in the Sensory and Neural Drivers of Behavior. Current biology: CB, 28(15), 2400–2412.e6. Elsevier. Retrieved from <a href="http://dx.doi.org/10.1016/j.cub.2018.06.011" class="uri">http://dx.doi.org/10.1016/j.cub.2018.06.011</a></p>
 <p>Francisco, F. A., Nührenberg, P., &amp; Jordan, A. L. (2019). A low-cost, open-source framework for tracking and behavioural analysis of animals in aquatic ecosystems. bioRxiv. biorxiv.org. Retrieved from <a href="https://www.biorxiv.org/content/10.1101/571232v1.abstract" class="uri">https://www.biorxiv.org/content/10.1101/571232v1.abstract</a></p>

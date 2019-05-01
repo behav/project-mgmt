@@ -44,6 +44,15 @@ BehAV.ai is supported by the Penn State Institute for Cyberscience (ICS) seed gr
 - Conrad Tucker, Ph.D., PSU/CMU (Co-PI)
 - Drew Polasky, PSU/ICS (consultant)
 
+# Goals
+
+1. Implement video/image data analytic workflows on PSU HPC resources
+2. Create UI to enable non-specialist users to deploy these workflows on their own videos
+3. Demonstrate utility of using videos stored on Databrary or other API-accessible sources
+4. Develop open/extensible video annotation format
+5. (Stretch) pilot UI/UX for visualizing annotations from multiple video analysis tools
+6. (Stretch) pilot scheme for semi-automated (human-in-the-loop) creation and modification of video analysis workflows
+
 # Resources
 
 ## Technology evaluation
@@ -56,7 +65,12 @@ Most tools focus on a small subset of domains:
 2. Body pose estimation/motion tracking
 3. Speech transcription
 
-Pliers, on the other hand, provides a set of tools to generate annotations in a common data format.
+[Pliers](https://github.com/tyarkoni/pliers), on the other hand, provides a set of tools to generate annotations in a common data format.
+
+### Issues
+
+- Open source vs. proprietary
+- Do cloud/AI as a service providers maintain confidentiality/privacy? Some terms of use involve giving unlimited rights to analytic providers.
 
 ### Software stack
 
@@ -76,6 +90,10 @@ Pliers, DeepLabCut, and LEAP are Python tools. VoTT uses node.js.
 - [You Only Look Once (Yolo)](https://pjreddie.com/darknet/yolo/) object labeling
     - ROG's colleague, Chen Yu, uses YOLO in his research.
 - [OpenCV](https://opencv.org/)
+
+## Commercial resources
+
+- [IBM PowerAI Vision](https://www.ibm.com/us-en/marketplace/ibm-powerai-vision)
 
 ## Bibliography
 
