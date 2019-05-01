@@ -1,0 +1,38 @@
+---
+title: "Meeting notes"
+author: "Rick O. Gilmore"
+date: "`r Sys.time()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    code_folding: hide
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 2019-05-01, IST Bridge
+
+## Attendees
+
+- Steve Fast, Kory Blose, Dan Albohn, Rick Gilmore, ~~Ori Ossmy (remote)~~ 
+
+## Agenda
+
+1. Introductions
+2. Updates
+    - IBM workshop and resources (Kory)
+    - NIH BRAIN initiative (Rick)
+3. Goal-setting
+    - Deploy X video/image analysis tools on HPC
+        - Which tools? Cloud (AI as a Service), open source, or?
+        - Which tools? What use-cases?
+    - Create workflows for video/image analysis suitable for use by non-specialists
+    - Integration with Databrary or other API-accessible data sources
+
+## Action items

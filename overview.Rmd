@@ -26,6 +26,9 @@ To describe the BehAV.ai project team, resources available, and goals of the eff
 
 BehAV.ai is supported by the Penn State Institute for Cyberscience (ICS) seed grant program.
 
+- [Proposal narrative](https://docs.google.com/document/d/1XwKC_F5byeeSgrrgL2t8wT7J4DDVVST1jY1Rdmr7NNg/edit?usp=sharing)
+- [Proposal abstract](https://docs.google.com/document/d/13pungK4Vi6aOHCBQxBCmrkHJ3uUsyhgdRWLOzFyFHeg/edit?usp=sharing)
+
 ## Potential
 
 - <https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-145.html>
@@ -59,19 +62,22 @@ Pliers, on the other hand, provides a set of tools to generate annotations in a 
 
 Pliers, DeepLabCut, and LEAP are Python tools. VoTT uses node.js.
 
+- A resource we may wish to consider is [json-schema](https://json-schema.org/).
+
 ## Open source software tools
 
 - [Microsoft Visual Object Tagging Tool (VoTT)](https://github.com/Microsoft/VoTT)
 - [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) pose estimation
 - [DeepLapCut](https://github.com/AlexEMG/DeepLabCut) motion tracking, especially for non-human animals
 - [Leap Estimates Animal Pose (LEAP)](https://github.com/talmo/leap)
-    - ROG met the developer Talmo Pereira at the 2019 BRAIN Initiative investigators meeting.
+      - ROG met the developer, Talmo Pereira, at the 2019 BRAIN Initiative investigators meeting.
 - [JAABA - Janelia Automatic Animal Behavior Annotator](http://jaaba.sourceforge.net/)
 - [Pliers](https://github.com/tyarkoni/pliers), Python package for integrating video/audio/image feature extraction
 - [You Only Look Once (Yolo)](https://pjreddie.com/darknet/yolo/) object labeling
+    - ROG's colleague, Chen Yu, uses YOLO in his research.
 - [OpenCV](https://opencv.org/)
 
-## References
+## Bibliography
 
 Biggs, B., Roddick, T., Fitzgibbon, A., & Cipolla, R. (2018, November 14). Creatures great and SMAL: Recovering the shape and motion of animals from video. arXiv [cs.CV]. Retrieved from arXiv.
 
@@ -79,9 +85,15 @@ Clemens, J., Coen, P., Roemschied, F. A., Pereira, T. D., Mazumder, D., Aldarond
 
 Francisco, F. A., Nührenberg, P., & Jordan, A. L. (2019). A low-cost, open-source framework for tracking and behavioural analysis of animals in aquatic ecosystems. bioRxiv. biorxiv.org. Retrieved from https://www.biorxiv.org/content/10.1101/571232v1.abstract
 
+Gilmore, R.O. (n.d.). Databraryapi: An R package for interacting with the Databrary API. Retrieved from http://github.com/PLAY-behaviorome/databraryapi.
+
 Mathis, A., Mamidanna, P., Cury, K. M., Abe, T., Murthy, V. N., Mathis, M. W., & Bethge, M. (2018). DeepLabCut: markerless pose estimation of user-defined body parts with deep learning. Nature neuroscience, 21(9), 1281–1289. Retrieved from http://dx.doi.org/10.1038/s41593-018-0209-y
 
+Ossmy, O., Gilmore, R.O., & Adolph, K.E. (in press). AutoViDev: A computer-vision framework to enhance and accelerate research in human development. In Advances in Intelligent Systems and Computing. Presented at the Computer Vision Conference (CVC) 2019, Springer.
+
 Pereira, T. D., Aldarondo, D. E., Willmore, L., Kislin, M., -H. Wang, S. S., Murthy, M., & Shaevitz, J. W. (2018, May 30). Fast animal pose estimation using deep neural networks. bioRxiv. Retrieved April 13, 2019, from https://www.biorxiv.org/content/10.1101/331181v2.abstract
+
+Prakash, S. K. A., & Tucker, C. S. (2018). Bounded Kalman filter method for motion-robust, non-contact heart rate estimation. Biomedical Optics Express, 9(2), 873–897.
 
 Štih, V., Petrucco, L., Kist, A. M., & Portugues, R. (2019). Stytra: An open-source, integrated system for stimulation, tracking and closed-loop behavioral experiments. PLoS computational biology, 15(4), e1006699. journals.plos.org. Retrieved from http://dx.doi.org/10.1371/journal.pcbi.1006699
 
