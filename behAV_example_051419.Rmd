@@ -212,7 +212,7 @@ Openpose outputs the following files:
 1). Visualization of the output
 
 <video width="480" height="360" controls>
-  <source src="example_files/op_result.mp4" type="video/mp4">
+  <source src="example_files/openpose_result.mp4" type="video/mp4">
 </video>
 
 2). A `json` file of key landmark positions on a per frame basis
