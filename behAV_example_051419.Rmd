@@ -96,9 +96,9 @@ Openface outputs the following files:
 
 2). Every face detected in each frame cropped and aligned, e.g.,
 
-![](data/jimcarrey_of_aligned/frame_det_00_000001.bmp) ![](data/jimcarrey_of_aligned/frame_det_00_000002.bmp)
+![](example_files/jimcarrey_of_aligned/frame_det_00_000001.bmp) ![](example_files/jimcarrey_of_aligned/frame_det_00_000002.bmp)
 
-![](data/jimcarrey_of_aligned/frame_det_00_000010.bmp) ![](data/jimcarrey_of_aligned/frame_det_00_000011.bmp)
+![](example_files/jimcarrey_of_aligned/frame_det_00_000010.bmp) ![](example_files/jimcarrey_of_aligned/frame_det_00_000011.bmp)
 
 3). A list of [HOG](https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients) values for found faces
 
