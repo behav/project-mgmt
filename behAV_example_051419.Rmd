@@ -1,0 +1,285 @@
+---
+title: "behAV Example"
+author: "Daniel N. Albohn"
+date: "`r Sys.time()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, error = FALSE, message = FALSE,
+                      eval = FALSE)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+# BehAV Example: Where are we?
+Currently, I have three containers/modules working on the ACI system:
+  
+  - [Openface](https://github.com/behav/openface)
+  
+  - [fer](https://github.com/d-bohn/emorec_aci/tree/16.04) (emotion recognition based PyPi and TF)
+  
+  - [Openpose](https://github.com/behav/openface)
+  
+See the hyperlinks for details on running them on the ACI nodes.
+  
+## Example video
+This is a good example video because it is novel and has both extreme body and face language.
+It is a ~1 minute video at a resolution of 480x360px. We will see how these containers
+perform on it.
+
+<video width="480" height="360" controls>
+  <source src="example_files/jimcarrey.mp4" type="video/mp4">
+</video>
+
+## ACI Startup
+First, we need to log in and start up an ACI instance.
+
+```{bash aci-login}
+ssh USERID@aci-b.aci.ics.psu.edu -X -Y
+```
+
+the `-X` and `-Y` flags are for X windows on the node (only necessary if running from `ssh` not through Exceed on Demand).
+Next, we have to specify the type of node we want to run. This node is relatively large because Openpose
+runs (currently) on CPU only and requires a lot of resources.
+
+```{bash aci-login-II}
+qsub -A open -I -X -l walltime=24:00:00 -l nodes=5:ppn=15 -l pmem=50gb
+```
+
+Make a project directory and pull video file.
+
+```{bash aci-prep}
+mkdir ~/projects/behAV_example
+
+wget -O ~/projects/behAV_example/jimcarrey.mp4 http://personal.psu.edu/dna5021/Experiments/jimcarrey.mp4
+```
+
+**Note: I pulled the results from each container off of ACI for ease of display using:**
+
+```{bash pull-data}
+scp -r USERID@datamgr.aci.ics.psu.edu:~/projects/behAV_example ~/Documents/behAV/project-mgmt
+```
+
+# Openface
+First, we make some project directories and start the singularity instance.
+
+```{bash of-I}
+mkdir ~/projects/behAV_example/data
+
+singularity exec ~/work/openface/d-bohn-openface_aci-master-latest.simg /bin/bash
+```
+
+To run the analysis use `FeatureExtraction` (outputs all data):
+
+```{bash of-II}
+cd /OpenFace/
+
+./build/bin/FeatureExtraction -f ~/projects/behAV_example/jimcarrey.mp4 -out_dir ~/projects/behAV_example/data -of jimcarrey_of
+```
+
+## Results
+Openface outputs the following files:
+
+1). Visualization of output
+
+<video width="480" height="360" controls>
+  <source src="example_files/jimcarrey_of.mp4" type="video/mp4">
+</video>
+
+2). Every face detected in each frame cropped and aligned, e.g.,
+
+![](example_files/jimcarrey_of_aligned/frame_det_00_000001.bmp) ![](example_files/jimcarrey_of_aligned/frame_det_00_000002.bmp)
+
+![](example_files/jimcarrey_of_aligned/frame_det_00_000010.bmp) ![](example_files/jimcarrey_of_aligned/frame_det_00_000011.bmp)
+
+3). A list of [HOG](https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients) values for found faces
+
+  - Can't read them into/visualize in R yet (probably need python module)
+  
+4). A `csv` of values on per frame level (AUs, head position, facial landmarks, etc)
+
+```{r of-data, eval = TRUE}
+of <- read_csv("example_files/jimcarrey_of.csv")
+
+of %>% 
+  head(n=10) %>% 
+  kable() %>% 
+  kable_styling() %>% 
+  scroll_box(width = "100%", height = "200px")
+```
+
+5) Meta data about Openface, call made, and input/output
+
+```{r of-details, eval = TRUE}
+ofd <- read_table("example_files/jimcarrey_of_of_details.txt")
+
+ofd
+```
+
+## Performance notes
+It seems for successful analysis of a face in video the face needs to be relatively large within the frame.
+I believe that the user can specify the sensitivity of the model (at the cost of accuracy), but I'll have
+to check. Might want to think about how to handle parameters like this in the app.
+
+# FER (emorec)
+Start the singularity instance.
+
+```{bash emorec-I}
+singularity exec ~/work/emorec/emorec_aci.simg /bin/bash
+```
+
+To run the analysis use:
+
+```{bash emorec-II}
+python3.6 /opt/emorec/video_analysis.py ~/projects/behAV_example/jimcarrey.mp4 ~/projects/behAV_example/data fer_jimcarrey.csv
+```
+
+## Results
+FER (emorec) outputs the following files:
+
+1). Visualization of the output
+
+<video width="480" height="360" controls>
+  <source src="example_files/jimcarrey_output2.mp4" type="video/mp4">
+</video>
+
+2). A `csv` of emotion values per frame
+
+```{r fer, eval = TRUE}
+fer <- read_csv("example_files/fer_jimcarrey.csv")
+
+fer %>% 
+  head(n=10) %>% 
+  kable() %>% 
+  kable_styling() %>% 
+  scroll_box(width = "100%", height = "200px")
+```
+
+The `csv` file outputs the dimensions of the detected face bounding box, and model confidence scores (0-1) for each emotion.
+
+## Performance notes
+Relatively quick and accurate. It appears that the output video just stitches the frames together for which
+it can identify a face, skipping any frames in the video that the model fails. Interest choice, but may be
+useful for end users to glimpse the data.
+
+The cropped and aligned images might be useful for end user data skimming if sampled randomly (e.g., to see how much of
+their video was able to be detected by the model)
+
+The `csv` output file has `NA` values for failed model fits, allowing the length of the file to represent total
+number of frames in the video being analyzed.
+
+Should compare these results to an industry standard (e.g., Microsoft AI, FaceReader).
+
+# Openpose
+Make the appropriate directories, and start the singularity instance.
+
+```{bash op-I}
+mkdir ~/projects/behAV_example/data/poses
+
+singularity exec ~/work/openpose/openpose.simg /bin/bash
+```
+
+To run the analysis, we just run the example (outputs everything), and fill in the
+parameters as needed. (Note: you need to write out to user-writable directories).
+
+```{bash op-II}
+cd /opt/openpose
+
+./build/examples/openpose/openpose.bin --video ~/projects/behAV_example/jimcarrey.mp4 --write_video ~/projects/behAV_example/data/op_result.avi --write_json ~/projects/behAV_example/data/poses --display 0 --net_resolution "320x176"
+
+# Add --face and --hand flags for more data
+# ./build/examples/openpose/openpose.bin --video ~/projects/behAV_example/jimcarrey.mp4 --face --hand --write_video ~/projects/behAV_example/data/op_result.avi --write_json ~/projects/behAV_example/data/poses --display 0 --net_resolution "320x176"
+
+# Potential speed up
+# ./build/examples/openpose/openpose.bin --tracking 1 --number_people_max 1 --video ~/projects/behAV_example/jimcarrey.mp4 --face --hand --write_video ~/projects/behAV_example/data/op_result.avi --write_json ~/projects/behAV_example/data/poses --display 0 --net_resolution "320x176"
+```
+
+**Note:** I tried reducing the video size (`--net_resolution`) to help speed up the analysis. There's also several other options
+for speeding up the CPU version (e.g., `--tracking` and `--number_people_max`). A list of some CLI flags
+[here](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/demo_overview.md#main-flags).
+
+## Results
+Openpose outputs the following files:
+
+1). Visualization of the output
+
+<video width="480" height="360" controls>
+  <source src="example_files/openpose_result.mp4" type="video/mp4">
+</video>
+
+2). A `json` file of key landmark positions on a per frame basis
+
+```{r op, eval = TRUE}
+op_files <- list.files("example_files/poses", full.names = TRUE)
+
+# op1 <- jsonlite::read_json(op_files[[1]], simplifyVector = TRUE)["people"]
+
+RJSONIO::fromJSON(op_files[[1]])
+```
+
+```{r op2, eval = TRUE}
+RJSONIO::fromJSON(op_files[[2]])
+```
+
+I'm assuming an empty list means none of those points were identifiable by the model.
+
+**Output Visualization Points**
+
+![](https://raw.githubusercontent.com/CMU-Perceptual-Computing-Lab/openpose/master/doc/media/keypoints_pose_25.png)
+
+  - [Full output details](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md)
+
+## Performance notes
+CPU version is agonizingly slow, but according to the Openpose documentation is about ~10% more accurate than the GPU
+version. Still, for an end user app, the CPU version is probably unusable at this speed.
+
+That being said, the accuracy of the model is good The fact that it can keep up with Jim Carrey's antics 
+is impressive. Hopefully getting this running on a GPU will increase speed exponentially.
+
+# Closing Remarks
+## Notes
+
+  - Openpose is currently running only on CPU and can take a while to run (e.g., 
+  the example video took > 6 hours on a nearly-maxed out ACI node)
+  
+  - Openface runs at 2:1 speed (e.g., example vid takes about 2 mins)
+  
+  - FER (emorec) at about 1:1 speed.
+  
+  - Openface and Openpose containers are large images (> 6 GB each)
+
+## Future Directions
+
+  - Re-build Openface image into `/opt` for container consistency
+  
+  - Openface outputs very nice meta data; perhaps institute this across all container outputs?
+  
+  - FER (emorec) saves output video to the base video input folder. Change code to save to
+  user-specified data output folder
+  
+    - Get each container running a standalone executable so no need to start each container and `cd` into
+    each one to run each analysis; takes too long to `cd` into the container on ACI
+  
+  - Continue work on wrapping some CLI functions in `R` to interface with `shiny`; I already
+  started the `containerconnector` package for this purpose
+  
+  - Standardize output across containers of interest (currently two `csv` files and one `json` file)
+  
+  - Get Openpose running on a GPU instance
+  
+    - Need to be part of the [GReaT](https://ics.psu.edu/computing-services/service-details/)
+    user group
+    
+    - [GPU ACI Resources](https://ics.psu.edu/userguide/07-00-running-jobs-on-aci-b/07-05-aci-b-gpu-nodes/)
+  
+  - FER (emorec) video outputs a `.mp4` that was not recognized by RMarkdown. I had to re-encode it with `ffmpeg`;
+  might consider adding some `ffmpeg` commands to the preprocessing script to make all output video formats
+  standard across containers
