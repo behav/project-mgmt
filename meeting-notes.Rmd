@@ -7,7 +7,6 @@ output:
     toc: true
     toc_depth: 3
     toc_float: true
-    number_sections: true
     code_folding: hide
     self_contained: false
 ---
@@ -20,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Attendees
 
-- Rick Gilmore, Kory Blose, Dan Albohn, Drew Polasky, Ori Ossmy (remote)
+- Rick Gilmore, Kory Blose (remote), Dan Albohn, Drew Polasky, Ori Ossmy (remote)
 
 ## Agenda
 
