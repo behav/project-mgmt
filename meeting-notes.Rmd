@@ -16,6 +16,24 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# 2019-05-30, 350 Moore Building
+
+## Attendees
+
+- Rick Gilmore, Kory Blose, Dan Albohn, Drew Polasky, Ori Ossmy (remote)
+
+## Agenda
+
+1. Introductions
+2. Update from Dan about emotion processing workflow [html](https://behav.github.io/project-mgmt/behAV_example_051419.html).
+3. Building on Dan's work, specifically optimization (Drew)
+4. Next steps
+    - Drew will work with Dan on optimizing the code for i) interactive use, ii) use of GPU nodes, and iii) eventually batch processing. Focus is specifically on optimizing OpenPose since it is so slow.
+    - Dan will containerize YOLO.
+    - Kory will provide Dan some videos; Dan, Rick, and Ori will also look for videos with more diverse components.
+    - Rick, Ori, & Dan will develop a QA protocol, focusing first on # of frames with faces detected, and expanding to other variables later. The goal is to try to identify where the model(s) have particular difficulty and the features of those frames.
+    - Drew will set-up 5TB group allocation.
+
 # 2019-05-01, IST Bridge
 
 ## Attendees
@@ -39,4 +57,3 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1. Kory and Dan will meet; create milestones.
 2. Rick to ACI about RA (Drew Polasky) and space/group account.
-
