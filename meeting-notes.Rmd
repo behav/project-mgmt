@@ -30,7 +30,7 @@ knitr::opts_chunk$set(echo = TRUE)
 4. Next steps
     - Drew will work with Dan on optimizing the code for i) interactive use, ii) use of GPU nodes, and iii) eventually batch processing. Focus is specifically on optimizing OpenPose since it is so slow.
     - Dan will containerize YOLO.
-    - Kory will provide Dan some videos; Dan, Rick, and Ori will also look for videos with more diverse components.
+    - Kory will provide Dan some videos; Dan, Rick, and Ori will also look for videos with more diverse components (faces, objects, PLAY videos Ori has been running OpenPose + YOLO on)
     - Rick, Ori, & Dan will develop a QA protocol, focusing first on # of frames with faces detected, and expanding to other variables later. The goal is to try to identify where the model(s) have particular difficulty and the features of those frames.
     - Drew will set-up 5TB group allocation.
 
