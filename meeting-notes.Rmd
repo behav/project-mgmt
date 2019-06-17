@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Attendees
 
-- Rick Gilmore (PSU), Alisa Surkis (NYU), Kevin Read (NYU), Rob Froemke (NYU), Jeff Spies (Databrary), Peter Petersen (NYU)
+- Rick Gilmore, Alisa Surkis, Kevin Read, Rob Froemke, Jeff Spies, Peter Petersen
 
 ## Agenda
 
