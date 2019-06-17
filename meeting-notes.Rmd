@@ -15,15 +15,15 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# 2019-06-17, Zoom
+# 2019-06-17,  NYU Team re: non-human animal data, Zoom
 
 ## Attendees
 
-- Rick Gilmore, 
+- Rick Gilmore, Alisa Surkis, Kevin Read, Rob Froemke, Jeff Spies, Peter Petersen
 
 ## Agenda
 
-- Discuss NIH Brain Initiative calls, especially [RFA-MH-19147](https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-147.html) and [RFA-MH-19-145](https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-145.html).
+- Discuss NIH Brain Initiative calls, especially [RFA-MH-19-147](https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-147.html) and [RFA-MH-19-145](https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-145.html).
 - Background email from Ming Zhan at NIMH:
 
 From: Zhan, Ming (NIH/NIMH) [E] <ming.zhan@nih.gov>
@@ -91,6 +91,16 @@ University Park, PA 16801
 814-865-3664 (voice)
 rog1@psu.edu
 gilmore-lab.github.io
+
+## Action items
+
+- Rob will talk with DeepLabCut developers soon.
+- Rob will consider talking with European group that is also using video.
+- Rick will draft and circulate a specific aims page.
+- Peter will share information about the metadata schema his group is developing.
+- Everyone will read [RFA-MH-19-147](https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-147.html) carefully and think about PI/Co-PI roles. Rick has agreed to serve as PI, with Rob as Co-PI.
+- Rick will poll the group about availability to meet again the week of 8/19 or 8/26.
+- Rick will circulate some relevant draft proposals and reviews.
  
 # 2019-05-30, 350 Moore Building
 
