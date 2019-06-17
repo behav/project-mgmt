@@ -15,6 +15,83 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# 2019-06-17, Zoom
+
+## Attendees
+
+- Rick Gilmore, 
+
+## Agenda
+
+- Discuss NIH Brain Initiative calls, especially [RFA-MH-19147](https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-147.html) and [RFA-MH-19-145](https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-145.html).
+- Background email from Ming Zhan at NIMH:
+
+From: Zhan, Ming (NIH/NIMH) [E] <ming.zhan@nih.gov>
+Sent: Friday, April 26, 2019 4:52 PM
+To: rog1@psu.edu
+Cc: Gnadt, Jim (NIH/NINDS) [E]; David, Karen (NIH/NINDS) [E]; Farber, Greg (NIH/NIMH) [E]; Karen Adolph; Froemke, Robert; Jeff Spies
+Subject: RE: Meet tomorrow (Sat) @ BRAIN initiative mtg?
+ 
+Hi Rick,
+ 
+Thanks for your interests in the BRAIN Initiative Informatics Program.
+ 
+We had a discussion about your option of either developing a data archive or a data analysis software for your potential application, and considered that a project of software development would better fit to our program. I would therefore suggest you submit an application in response to MH-19-147.
+ 
+I expect that the major users of the to-be-developed software would be investigators from the BRAIN U19 program. It would be great if you could interact with those investigators in your preparation of the application. I’ve also cc’ed to Drs. Jim Gnadt and Karen David, the POs of the program, who may send you contact persons or additional information of the program.
+ 
+Best,
+Ming
+ 
+Ming Zhan, Ph.D.
+NIH BRAIN Initiative Informatics Program
+Office of Technology Development and Coordination
+National Institute of Mental Health, NIH
+6001 Executive Blvd,  Room 8152
+Rockville MD 20852, USA
+Phone: (301) 827-3678
+E-mail:  ming.zhan@nih.gov
+https://www.braininitiative.nih.gov/brain-programs/informatics
+ 
+ 
+From: Gilmore, Rick Owen <rog1@psu.edu> 
+Sent: Saturday, April 20, 2019 8:08 PM
+To: Zhan, Ming (NIH/NIMH) [E] <ming.zhan@nih.gov>
+Cc: Farber, Greg (NIH/NIMH) [E] <farberg@mail.nih.gov>; Karen Adolph <kea1@nyu.edu>; Froemke, Robert <Robert.Froemke@nyulangone.org>; Jeff Spies <jeff@221b.io>
+Subject: Re: Meet tomorrow (Sat) @ BRAIN initiative mtg?
+ 
+Dear Dr. Zhan,
+ 
+As promised, here are some bullet points describing the ideas we have been discussing. We look forward to talking with you about them.
+ 
+- Build upon and enhance the NIH-funded Databrary.org video data repository's storage, streaming, & sharing capacity.
+- Extend Databrary.org restricted access policy framework to include permitting restricted but open access to videos of non-human animals.
+- Extend the scope of searchable metadata to incorporate standard fields most useful for data discovery and reuse among the BRAIN initiative and neuroscience research communities.
+- Enhance Databrary's infrastructure to enable storage of other temporally-dense data files that accompany video streams (e.g, kinematics, physiology).
+ 
+Data analysis tool-related ideas
+ 
+- Incorporate computer vision-enhanced annotation (object labeling, pose/motion tracking) tools into the Databrary system so that other researchers can easily deploy these tools on shared videos.
+- Extend the Databrary data model to allow human- and machine-produced annotations and other time series data streams to be visualized in the browser.
+- Create ways to store time series data streams in common, open, and easily combined formats on Databrary to support the construction, storage, visualization, and sharing of multiple annotation layers.
+- Enhance the Databrary API's existing capacity to find, filter, and serve specified labeled time segments of video or audio to make it possible for users to create training and testing data sets for custom computer vision-enhanced workflows.
+ 
+I’ve copied BRAIN Initiative investigator, Rob Froemke, and my Databrary colleagues, Karen Adolph and Jeff Spies.
+ 
+Best,
+ 
+Rick Gilmore
+ 
+Rick O. Gilmore, Ph.D.
+Associate Professor of Psychology
+Co-Director, Databrary.org
+114 Moore Building
+The Pennsylvania State University
+University Park, PA 16801
+814-865-3664 (voice)
+rog1@psu.edu
+gilmore-lab.github.io
+ 
 # 2019-05-30, 350 Moore Building
 
 ## Attendees
