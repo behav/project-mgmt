@@ -1,0 +1,43 @@
+---
+title: "BehAV on ACI: Incompatible Software"
+author: "Daniel N. Albohn"
+date: "`r Sys.time()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, error = FALSE, message = FALSE,
+                      eval = FALSE)
+```
+
+# BehAV on ACI
+
+1. Kernel too old to run > Ubuntu 16.04
+
+2. CUDA 
+
+  - The newest version of `OpenPose` requires CUDA to be >= to 10.0. The new version contains
+  various command line arguments that might be benefical for production use.
+
+# ACI Software Current Versions
+
+<style type="text/css">
+.table {
+
+    width: 50%;
+
+}
+</style>
+
+|  **Software** |  **Version**  | **Required** |
+| -------------:|--------------:| ------------:|
+| Kernel        | 2.6.32        | x.x.xx       |
+| CUDA          | 8.1, 9.0, 9.1 | >= 10.0      |
+
+

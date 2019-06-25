@@ -1,0 +1,40 @@
+---
+title: "behAV Example"
+author: "Daniel N. Albohn"
+date: "`r Sys.time()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, error = FALSE, message = FALSE,
+                      eval = FALSE)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+# BehAV Update II
+Currently, these containers are working on the ACI system:
+  
+  - [Openface](https://github.com/behav/openface)
+  
+  - [fer](https://github.com/d-bohn/emorec_aci/tree/16.04)
+  
+  - [Openpose](https://github.com/behav/openface) GPU (old version)
+  
+  - [YOLO](https://pjreddie.com/darknet/yolo/)
+  
+# Looking Ahead
+
+  - [DeepLabCut](https://github.com/MMathisLab/DeepLabCut)
+  
+    - Pre-made [Docker image](https://github.com/MMathisLab/Docker4DeepLabCut2.0) may be limiting
+  
+  - [DeeperCut](https://github.com/eldar/pose-tensorflow)
+
