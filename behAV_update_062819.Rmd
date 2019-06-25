@@ -35,6 +35,29 @@ Currently, these containers are working on the ACI system:
   - [DeepLabCut](https://github.com/MMathisLab/DeepLabCut)
   
     - Pre-made [Docker image](https://github.com/MMathisLab/Docker4DeepLabCut2.0) may be limiting
-  
+    
+Aside from DeepLabCut, some potential containers that might be of interst/use to the project include:
+    
+## Post Estimation
+    
   - [DeeperCut](https://github.com/eldar/pose-tensorflow)
+
+## Emotion Recognition
+
+  - [MicroExpNet](https://github.com/cuguilke/microexpnet)
+  
+  - [MultiModal Emotion Recognition I](https://github.com/tzirakis/Multimodal-Emotion-Recognition)
+  
+  - [MultiModal Emotion Recognition II](https://github.com/maelfabien/Multimodal-Emotion-Recognition)
+  
+## Face Recognition/Detection
+  
+  - [facenet](https://github.com/davidsandberg/facenet)
+  
+  - [facedetect](https://gitlab.com/wavexx/facedetect)
+  
+  - [face_recognition](https://github.com/ageitgey/face_recognition)
+  
+  
+# Examples
 
