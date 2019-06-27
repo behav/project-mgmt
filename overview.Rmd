@@ -96,12 +96,17 @@ Pliers, DeepLabCut, and LEAP are Python tools. VoTT uses node.js.
 
 - [IBM PowerAI Vision](https://www.ibm.com/us-en/marketplace/ibm-powerai-vision)
 - IBM Intelligent Video Analytics
+- [Active Learning for Object Detection](https://www.microsoft.com/developerblog/2018/11/06/active-learning-for-object-detection/).
 
 ## Bibliography
 
 Biggs, B., Roddick, T., Fitzgibbon, A., & Cipolla, R. (2018, November 14). Creatures great and SMAL: Recovering the shape and motion of animals from video. arXiv [cs.CV]. Retrieved from arXiv.
 
+Bornstein, A. (ari). (2019, February 4). Using Object Detection for Complex Image Classification Scenarios Part 4: Towards Data Science. Towards Data Science. Retrieved June 27, 2019, from https://towardsdatascience.com/using-object-detection-for-complex-image-classification-scenarios-part-4-3e5da160d272.
+
 Clemens, J., Coen, P., Roemschied, F. A., Pereira, T. D., Mazumder, D., Aldarondo, D. E., Pacheco, D. A., et al. (2018). Discovery of a New Song Mode in Drosophila Reveals Hidden Structure in the Sensory and Neural Drivers of Behavior. Current biology: CB, 28(15), 2400–2412.e6. Elsevier. Retrieved from http://dx.doi.org/10.1016/j.cub.2018.06.011
+
+Active Learning for Object Detection in Partnership with Conservation Metrics - Developer Blog. (2018, November 6). Developer Blog. Retrieved June 27, 2019, from https://www.microsoft.com/developerblog/2018/11/06/active-learning-for-object-detection/
 
 Francisco, F. A., Nührenberg, P., & Jordan, A. L. (2019). A low-cost, open-source framework for tracking and behavioural analysis of animals in aquatic ecosystems. bioRxiv. biorxiv.org. Retrieved from https://www.biorxiv.org/content/10.1101/571232v1.abstract
 
