@@ -30,13 +30,40 @@ Currently, these containers are working on the ACI system:
   
   - [YOLO](https://pjreddie.com/darknet/yolo/)
   
+# YOLO Demonstration
+
+```{bash}
+python3 yolo_video.py --input ~/projects/behAV_example/jimcarrey.mp4 \
+    --ouput ~/projects/behAV_example/yolo_output/jim_yolo.avi \
+    --write_res ~/projects/behAV_example/yolo_output/yolo_res.csv \
+    --yolo yolo-coco
+```
+
+This outputs:
+
+  - `.avi` Video (see `example_files/jim_yolo.avi`)
+  
+<!-- <video width="480" height="360" controls> -->
+<!--   <source src="example_files/jim_yolo.avi" type="video/mp4"> -->
+<!-- </video> -->
+  
+  - File of bounding boxes, confidence, and tag
+  
+To do with YOLO:
+
+  - Alter code to output better `.csv` file
+  
+  - Optimize OpenCV for GPU performance? [doc](https://www.pyimagesearch.com/2016/07/11/compiling-opencv-with-cuda-support/)
+
 # Looking Ahead
 
   - [DeepLabCut](https://github.com/MMathisLab/DeepLabCut)
   
     - Pre-made [Docker image](https://github.com/MMathisLab/Docker4DeepLabCut2.0) may be limiting
     
-Aside from DeepLabCut, some potential containers that might be of interst/use to the project include:
+Aside from DeepLabCut, some potential containers that might be of interest/use to the project include:
+
+  - A faster gpu version of [YOLO](https://pypi.org/project/yolo34py-gpu/)
     
 ## Post Estimation
     
@@ -57,7 +84,18 @@ Aside from DeepLabCut, some potential containers that might be of interst/use to
   - [facedetect](https://gitlab.com/wavexx/facedetect)
   
   - [face_recognition](https://github.com/ageitgey/face_recognition)
-  
-  
-# Examples
 
+# Closing remarks
+
+  - Containers cannot interact with other containers (no singularity on container).
+  I'm attempting to run singularity in a container within another (such as shiny-server or
+  rstudio)
+  
+  - YOLOv3 running through python3. C++ no bounding box output? What's the parameter of interest?
+  
+  - YOLOv3 via python has a cool time estimator.
+  
+  - Singularity sometimes takes 10-20 seconds to boot container. Might need to work on optimizing
+  this? Perhaps upgrade singularity on the stack?
+  
+  - Hex logo?
