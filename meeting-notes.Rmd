@@ -15,6 +15,55 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# 2019-06-28, Video criteria for QA and comparative analyses
+
+## Dimensions for video variability
+
+1. Setting: indoor {lab, home, hallway}, outdoor
+2. Number of people in view
+3. Number, diversity of objects in view
+4. Overall level of illumination {bright, medium, dark}
+5. Camera position {fixed, in-motion}
+6. Size (approximate proportion of field of view) taken up by {face, hands, whole bodies}
+7. Video resolution (in pixels)
+8. Video resolution (in temporal sampling or frame rate)
+9. Video colormap: grayscale or RGB color
+10. Accompanying Datavyu codes that relate to emotional expression or some type of physical movement that could have a distinctive body pose pattern
+
+## Dimensions/variables for video evaluation
+
+1. Proportion of video frames where X {face, object, pose} was detected successfully
+2. Proportion of frames that match judgment of human coder
+3. Cross correlation between models fitting same underlying contruct (e.g., detecting faces, labeling body segments)
+
+# 2019-06-28, Rick & Ori
+
+## Agenda
+
+- QA planning, what videos, what variables to evaluate/compare
+- UI for visualizing & editing annotations
+
+## Action items
+
+- Rick will brainstorm a list of variables along which we want videos to vary
+- Rick will brainstorm a list of measures we want to use to evaluate/compare the videos
+- Ori will modify & extend Rick's drafts
+- Once we have specs for videos, Rick & Ori will talk with Karen and then the lab experts to enlist them in helping us find suitable videos.
+
+# 2019-06-28 Rick & Dan
+
+## Agenda
+
+- Discuss Dan's recent work on "containerizing" various models, e.g., YOLO
+- Discuss Dan's findings about what software versions are needed on ACI to optimize our use of the latest algorithms
+- Discuss how to deal with idiosyncrasies in data output formats from different models
+- Discuss Rick's suggestion that VoTT might be a suitable base for building a visualization tool
+
+## Action items
+
+- Rick will talk with Ori about the QA process (see above), including providing access to test videos
+- Dan will spend some time evaluating VoTT
+
 # 2019-06-17,  NYU Team re: non-human animal data, Zoom
 
 ## Attendees
