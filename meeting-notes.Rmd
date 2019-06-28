@@ -33,7 +33,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Dimensions/variables for video evaluation
 
 1. Proportion of video frames where X {face, object, pose} was detected successfully
-2. ...
+2. Proportion of frames that match judgment of human coder
+3. Cross correlation between models fitting same underlying contruct (e.g., detecting faces, labeling body segments)
 
 # 2019-06-28, Rick & Ori
 
