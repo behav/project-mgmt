@@ -1,0 +1,111 @@
+---
+title: 'BehAV: Labeling Tools'
+author: "Daniel N. Albohn"
+date: "`r Sys.time()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, error = FALSE, message = FALSE,
+                      eval = FALSE)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+# Resources
+
+- [Awesome data labeling](https://github.com/heartexlabs/awesome-data-labeling)
+  
+# Potential Labelers
+
+The labeler **needs** to have the following attributes:
+
+- Ability to handle both images and video
+
+- Import/export annotations
+
+- Some sort of layered annotations for comparisons
+
+The labeler will **preferably** have the following:
+
+- Import/export multiple types of annotations (e.g., `.csv`,`.json`)
+
+- Add meta-data
+
+## [Microsoft Visual Object Tagging Tool](https://github.com/microsoft/VoTT)
+Visual Object Tagging Tool: An electron app for building end to end Object
+Detection Models from Images and Videos.
+
+- Can run locally or in a web app
+
+  - Web app cannot access local file system
+  
+  - webapp [Docker image](https://hub.docker.com/r/jcjimenez/vott-web/)
+  
+- No way to import external data
+
+## [Labelbox](https://github.com/Labelbox/Labelbox)
+Labelbox is the fastest way to annotate data to build and ship computer vision applications.
+
+- Written in javascript
+
+- Easily create custom interfaces
+
+- Video analysis seems to be proprietary (https://www.labelbox.com/pricing)
+
+## [UltimateLabeling](https://github.com/alexandre01/UltimateLabeling)
+A multi-purpose Video Labeling GUI in Python with integrated SOTA detector and tracker.
+
+- Ability to import pre-existing files
+
+    Import labels: To import existing .CSV labels, hit Cmd+I (or Ctrl+I).
+    UltimateLabeling expects to read one .CSV file per frame, 
+    in the format: "class_id", "xc", "yc", "w", "h".
+    
+- `csv` file import/export
+
+- Can connect to remote server via `ssh`
+
+- YOLO integration
+
+- Seems to be under active development (i.e., missing some features)
+
+## [cvat](https://github.com/opencv/cvat)
+Powerful and efficient Computer Vision Annotation Tool (CVAT)
+
+- `XML` file output
+
+- Can only be run in Google Chrome
+
+- Run via docker compose (i.e., multiple containers), which is incompatible with
+singularity (as far as I know)
+
+## [ViPER](http://viper-toolkit.sourceforge.net/)
+
+- Written in Java (cross platform)
+
+- Loads annotations via `XML`
+
+- Relatively old (2015)
+
+## [Anvil](https://www.anvil-software.org/)
+
+- Written in Java
+
+- Relatively old (2015)
+  
+## [sloth](https://github.com/cvhciKIT/sloth)
+Sloth is a tool for labeling image and video data for computer vision research.
+
+[Installation guide](https://sloth.readthedocs.io/en/latest/installation.html)
+
+
+
+
