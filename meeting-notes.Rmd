@@ -22,13 +22,17 @@ knitr::opts_chunk$set(echo = TRUE)
 1. Setting: indoor {lab, home, hallway}, outdoor
 2. Number of people in view
 3. Number, diversity of objects in view
-4. Overall level of illumination {bright, medium, dark}
-5. Camera position {fixed, in-motion}
-6. Size (approximate proportion of field of view) taken up by {face, hands, whole bodies}
-7. Video resolution (in pixels)
-8. Video resolution (in temporal sampling or frame rate)
-9. Video colormap: grayscale or RGB color
-10. Accompanying Datavyu codes that relate to emotional expression or some type of physical movement that could have a distinctive body pose pattern
+4. Animals in view
+5. Any pictures of humans or human-shape-like in view?
+6. Rough estimate of angle between the human face and the camera (front, sideways, front/sideways, back)
+7. Size (approximate proportion of field of view) taken up by {face, hands, whole bodies}
+8. Overall level of illumination {bright, medium, dark}
+9. Camera position {fixed, in-motion}
+10. Video resolution (in pixels)
+11. Video resolution (in temporal sampling or frame rate)
+12. Video colormap: grayscale or RGB color
+13. Original recording type (analog/VHS, digital)
+14. Accompanying Datavyu codes that relate to emotional expression or some type of physical movement that could have a distinctive body pose pattern
 
 ## Dimensions/variables for video evaluation
 
