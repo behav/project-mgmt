@@ -182,4 +182,10 @@ multiple label types, but also can also import modified `JSON` files. It
 doesn't run in a browser, but can be containerized and run on any system with
 X11 support.
 
+## Labeler Considerations
+- No labeler that I have come across does online video transformation; all
+expect images (frames) to be pre-processed
 
+- Because frames are pre-processed, we need to consider the framerate of the
+original video, the sample rate of the classification model, and the frame
+extraction rate for the labelers (a few seem to default to extracting 5 fps)
