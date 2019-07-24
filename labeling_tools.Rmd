@@ -157,7 +157,7 @@ the project purpose, but may be useful nonetheless.
 
   - Doesn't run in browser
   
-  - Complicated JSON label file
+  - Uncomplicated JSON label file
   
   - Support for multiple label types
 
