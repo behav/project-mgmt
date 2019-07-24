@@ -15,6 +15,19 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# 2019-07-24, Rick & Dan
+
+## Agenda
+
+1. Update on annotation tools
+2. Discuss next steps
+
+## Action steps
+
+1. Rick will try to schedule team meeting before 8/2 or after 8/12.
+2. Rick will schedule meeting with Dan and Jeff Spies to discuss annotation tool findings.
+3. Dan will evaluate the work required to convert OpenFace, FER, and YOLO annotations into common (LabelMe) format for comparison.
+
 # 2019-06-28, Video criteria for QA and comparative analyses
 
 ## Dimensions for video variability

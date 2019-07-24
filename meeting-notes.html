@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Rick O. Gilmore" />
@@ -162,56 +163,12 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 <style type="text/css">
 .code-folding-btn { margin-bottom: 4px; }
 </style>
-<script>
-$(document).ready(function () {
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -260,8 +217,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -307,10 +262,29 @@ div.tocify {
 
 <h1 class="title toc-ignore">Meeting notes</h1>
 <h4 class="author">Rick O. Gilmore</h4>
-<h4 class="date">2019-07-10 12:39:31</h4>
+<h4 class="date">2019-07-24 12:55:37</h4>
+
 </div>
 
 
+<div id="rick-dan" class="section level1">
+<h1>2019-07-24, Rick &amp; Dan</h1>
+<div id="agenda" class="section level2">
+<h2>Agenda</h2>
+<ol style="list-style-type: decimal">
+<li>Update on annotation tools</li>
+<li>Discuss next steps</li>
+</ol>
+</div>
+<div id="action-steps" class="section level2">
+<h2>Action steps</h2>
+<ol style="list-style-type: decimal">
+<li>Rick will try to schedule team meeting before 8/2 or after 8/12.</li>
+<li>Rick will schedule meeting with Dan and Jeff Spies to discuss annotation tool findings.</li>
+<li>Dan will evaluate the work required to convert OpenFace, FER, and YOLO annotations into common (LabelMe) format for comparison.</li>
+</ol>
+</div>
+</div>
 <div id="video-criteria-for-qa-and-comparative-analyses" class="section level1">
 <h1>2019-06-28, Video criteria for QA and comparative analyses</h1>
 <div id="dimensions-for-video-variability" class="section level2">
@@ -343,7 +317,7 @@ div.tocify {
 </div>
 <div id="rick-ori" class="section level1">
 <h1>2019-06-28, Rick &amp; Ori</h1>
-<div id="agenda" class="section level2">
+<div id="agenda-1" class="section level2">
 <h2>Agenda</h2>
 <ul>
 <li>QA planning, what videos, what variables to evaluate/compare</li>
@@ -360,9 +334,9 @@ div.tocify {
 </ul>
 </div>
 </div>
-<div id="rick-dan" class="section level1">
+<div id="rick-dan-1" class="section level1">
 <h1>2019-06-28 Rick &amp; Dan</h1>
-<div id="agenda-1" class="section level2">
+<div id="agenda-2" class="section level2">
 <h2>Agenda</h2>
 <ul>
 <li>Discuss Dan’s recent work on “containerizing” various models, e.g., YOLO</li>
@@ -387,7 +361,7 @@ div.tocify {
 <li>Rick Gilmore, Alisa Surkis, Kevin Read, Rob Froemke, Jeff Spies, Peter Petersen</li>
 </ul>
 </div>
-<div id="agenda-2" class="section level2">
+<div id="agenda-3" class="section level2">
 <h2>Agenda</h2>
 <ul>
 <li>Discuss NIH Brain Initiative calls, especially <a href="https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-147.html">RFA-MH-19-147</a> and <a href="https://grants.nih.gov/grants/guide/rfa-files/RFA-MH-19-145.html">RFA-MH-19-145</a>.</li>
@@ -442,7 +416,7 @@ div.tocify {
 <li>Rick Gilmore, Kory Blose (remote), Dan Albohn, Drew Polasky, Ori Ossmy (remote)</li>
 </ul>
 </div>
-<div id="agenda-3" class="section level2">
+<div id="agenda-4" class="section level2">
 <h2>Agenda</h2>
 <ol style="list-style-type: decimal">
 <li>Introductions</li>
@@ -469,7 +443,7 @@ div.tocify {
 <li>Steve Fast, Kory Blose, Dan Albohn, Rick Gilmore, <del>Ori Ossmy (remote)</del></li>
 </ul>
 </div>
-<div id="agenda-4" class="section level2">
+<div id="agenda-5" class="section level2">
 <h2>Agenda</h2>
 <ol style="list-style-type: decimal">
 <li>Introductions</li>
@@ -517,6 +491,54 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
