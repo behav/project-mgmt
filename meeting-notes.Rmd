@@ -58,7 +58,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Agenda
 
-1. Update on annotation tools
+1. Update on [annotation tools](https://behav.github.io/project-mgmt/labeling_tools.html)
 2. Discuss next steps
 
 ## Action steps
