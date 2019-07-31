@@ -15,6 +15,45 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# 2019-07-31, BehAV.ai + Jeff Spies
+
+## Agenda
+
+1. Discuss Dan's findings on video annotation tools
+2. Discuss next steps for video analytics benchmarking project
+
+## Action items
+
+1. Dan will think about what research questions in his area of expertise, especially facial expression recognition, seem most apt as a demonstration case.
+2. Dan will try to get Microsoft's VoTT up to demo full functionality
+3. Depending on 2., Jeff may help us contact the MS group
+
+# 2019-07-31, BehAV.ai team
+
+## Attendees
+
+- Rick, Dan, Drew, Kory
+
+## Agenda
+
+1. Update on annotation tools functions on HPC
+    - Review of labeling tools, combine annotations (Dan); focus on [LabelMe](https://github.com/wkentaro/labelme)
+        - Kory found an annotation tool; will send Dan link
+    - Convert output from existing annotation programs
+        - Bounding boxes & polygons easy; pose estimation (e.g., OpenPose) harder because data representation has more points, segment connections
+2. Discuss optimization of existing workflows
+3. Discuss video benchmarking
+4. Discuss integration/UI/UX for multiple annotations
+
+## Action items
+
+1. Rick describe full stack workflow
+2. Drew will evaluate and recommend strategies to optimize on existing hardware
+3. Drew and Dan will recommend software upgrades to request from ICS
+4. Drew & Kory will get info about <https://www.ibm.com/us-en/marketplace/power-systems-ac922/details> mini-Summit node that PSU is bringing online.
+5. Rick will email Wayne & Jenni about early access for testing (also discuss software config re: NVIDIA drivers, etc.)
+6. Kory will send Dan info about IBM and other annotation tools
+
 # 2019-07-24, Rick & Dan
 
 ## Agenda
